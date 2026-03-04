@@ -1,0 +1,9 @@
+CREATE DATABASE escola;
+USE escola;
+CREATE TABLE escola (
+id INT PRIMARY KEY ,
+nome VARCHAR(100) NOT NULL,
+preco DECIMAL(4, 2)
+);
+SHOW TABLES;
+SELECT * FROM escola;
