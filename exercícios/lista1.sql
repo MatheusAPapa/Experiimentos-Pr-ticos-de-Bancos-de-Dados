@@ -1,0 +1,19 @@
+CREATE DATABASE IF NOT EXISTS empresa_db;
+USE empresa_db;
+CREATE TABLE funcionarios (
+id INT PRIMARY KEY AUTO_INCREMENT,
+nome VARCHAR(100) NOT NULL,
+cargo VARCHAR(50) NOT NULL,
+salario DECIMAL(10,2) NOT NULL
+); 
+ALTER TABLE funcionarios
+ADD COLUMN data_adimissao DATE NOT NULL;
+ALTER TABLE funcionarios
+DROP COLUMN cargo;
+ALTER TABLE funcionarios
+MODIFY salario DECIMAL(12,2); 
+
+CREATE TABLE departamentos (
+id INT PRIMARY KEY AUTO_INCREMENT,
+nome VARCHAR(100) NOT NULL
+);
